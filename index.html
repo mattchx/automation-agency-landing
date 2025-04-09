@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowForge | AI Automation Experts for Zapier & Make</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a855f7 100%);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.05);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .tooltip {
+      position: relative;
+    }
+
+    .tooltip:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .tooltip-text {
+      visibility: hidden;
+      width: 200px;
+      background-color: #111827;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -100px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0 flex items-center">
+            <div
+              class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white font-bold text-xl">
+              FF</div>
+            <span class="ml-2 text-xl font-bold text-gray-900">FlowForge</span>
+          </div>
+        </div>
+        <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+          <a href="#services" class="text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Services</a>
+          <a href="#solutions" class="text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Solutions</a>
+          <a href="#process" class="text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Process</a>
+          <a href="#testimonials" class="text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Clients</a>
+        </div>
+        <div class="flex items-center">
+          <a href="#contact"
+            class="ml-8 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white gradient-bg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="relative gradient-bg overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+        <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 lg:mt-16 lg:px-8 xl:mt-20">
+          <div class="sm:text-center lg:text-left">
+            <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
+              <span class="block">Supercharge Your Business</span>
+              <span class="block text-indigo-200">With AI Automation</span>
+            </h1>
+            <p
+              class="mt-3 text-base text-indigo-100 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+              We build custom automation solutions using Zapier and Make.com to streamline your workflows, eliminate
+              busywork, and boost productivity.
+            </p>
+            <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+              <div class="rounded-md shadow">
+                <a href="#contact"
+                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                  Book Free Consultation
+                </a>
+              </div>
+              <div class="mt-3 sm:mt-0 sm:ml-3">
+                <a href="#solutions"
+                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 md:py-4 md:text-lg md:px-10">
+                  See Solutions
+                </a>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+      <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+        src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+        alt="">
+    </div>
+  </div>
+
+  <!-- Trusted By Section -->
+  <div class="bg-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
+        Trusted by innovative companies worldwide
+      </p>
+      <div class="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+        <div class="col-span-1 flex justify-center items-center">
+          <img class="h-12" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Zapier_logo.svg" alt="Zapier">
+        </div>
+        <div class="col-span-1 flex justify-center items-center">
+          <img class="h-12" src="https://www.make.com/en/images/logos/make-logo.svg" alt="Make.com">
+        </div>
+        <div class="col-span-1 flex justify-center items-center">
+          <img class="h-12" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Google_%22G%22_Logo.svg"
+            alt="Google">
+        </div>
+        <div class="col-span-1 flex justify-center items-center">
+          <img class="h-12" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg"
+            alt="Microsoft">
+        </div>
+        <div class="col-span-1 flex justify-center items-center">
+          <img class="h-12" src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Notion_app_logo.png" alt="Notion">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <div id="services" class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:text-center">
+        <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Services</h2>
+        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          Automation Solutions Tailored to Your Needs
+        </p>
+        <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          We specialize in connecting your apps and automating workflows to save you time and money.
+        </p>
+      </div>
+
+      <div class="mt-10">
+        <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+          <div class="feature-card relative bg-white p-6 rounded-lg shadow-md transition-all duration-300">
+            <div class="absolute -top-6 left-6 rounded-full bg-indigo-500 p-3 text-white">
+              <i class="fas fa-robot text-xl"></i>
+            </div>
+            <h3 class="mt-8 text-lg leading-6 font-medium text-gray-900">Zapier Automation</h3>
+            <p class="mt-2 text-base text-gray-500">
+              We design and implement complex Zaps that connect your apps and automate repetitive tasks without writing
+              code.
+            </p>
+            <div class="mt-4">
+              <span
+                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+                Most Popular
+              </span>
+            </div>
+          </div>
+
+          <div class="feature-card relative bg-white p-6 rounded-lg shadow-md transition-all duration-300">
+            <div class="absolute -top-6 left-6 rounded-full bg-purple-500 p-3 text-white">
+              <i class="fas fa-project-diagram text-xl"></i>
+            </div>
+            <h3 class="mt-8 text-lg leading-6 font-medium text-gray-900">Make.com Workflows</h3>
+            <p class="mt-2 text-base text-gray-500">
+              For more advanced automation needs, we build sophisticated workflows with conditional logic, data
+              transformations, and error handling.
+            </p>
+          </div>
+
+          <div class="feature-card relative bg-white p-6 rounded-lg shadow-md transition-all duration-300">
+            <div class="absolute -top-6 left-6 rounded-full bg-blue-500 p-3 text-white">
+              <i class="fas fa-brain text-xl"></i>
+            </div>
+            <h3 class="mt-8 text-lg leading-6 font-medium text-gray-900">AI Integration</h3>
+            <p class="mt-2 text-base text-gray-500">
+              Connect AI tools like ChatGPT to your workflows for automated content generation, data analysis, and
+              intelligent decision-making.
+            </p>
+          </div>
+
+          <div class="feature-card relative bg-white p-6 rounded-lg shadow-md transition-all duration-300">
+            <div class="absolute -top-6 left-6 rounded-full bg-green-500 p-3 text-white">
+              <i class="fas fa-tools text-xl"></i>
+            </div>
+            <h3 class="mt-8 text-lg leading-6 font-medium text-gray-900">Custom Solutions</h3>
+            <p class="mt-2 text-base text-gray-500">
+              Need something beyond standard integrations? We develop custom apps and APIs to bridge gaps in your
+              automation ecosystem.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Solutions Section -->
+  <div id="solutions" class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:text-center">
+        <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Solutions</h2>
+        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          Common Automation Use Cases
+        </p>
+        <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          Here are some of the ways we've helped businesses automate their operations
+        </p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Solution 1 -->
+        <div class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div class="p-6">
+            <div class="flex items-center">
+              <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                <i class="fas fa-envelope text-white text-xl"></i>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-medium text-gray-900">Lead Management</h3>
+              </div>
+            </div>
+            <p class="mt-4 text-gray-500">
+              Automatically capture leads from forms, social media, and ads. Enrich with data, assign to sales reps, and
+              trigger follow-up sequences.
+            </p>
+            <div class="mt-6 flex items-center">
+              <div class="flex-shrink-0">
+                <img class="h-8 w-8 rounded-full"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&h=256&q=60"
+                  alt="">
+              </div>
+              <div class="ml-3">
+                <p class="text-sm font-medium text-gray-900">Sarah Johnson</p>
+                <div class="flex space-x-1 text-sm text-gray-500">
+                  <span>Marketing Director</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-6 py-4">
+            <div class="flex justify-between items-center">
+              <span class="text-sm font-medium text-indigo-600 group-hover:text-indigo-500">View case study →</span>
+              <div class="flex -space-x-2">
+                <div class="tooltip">
+                  <img class="h-8 w-8 rounded-full border-2 border-white"
+                    src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Zapier_logo.svg" alt="Zapier">
+                  <span class="tooltip-text">Zapier Integration</span>
+                </div>
+                <div class="tooltip">
+                  <img class="h-8 w-8 rounded-full border-2 border-white"
+                    src="https://www.gstatic.com/images/branding/product/1x/sheets_48dp.png" alt="Google Sheets">
+                  <span class="tooltip-text">Google Sheets</span>
+                </div>
+                <div class="tooltip">
+                  <img class="h-8 w-8 rounded-full border-2 border-white"
+                    src="https://upload.wikimedia.org/wikipedia/commons/7/7b/HubSpot_Logo.png" alt="HubSpot">
+                  <span class="tooltip-text">HubSpot CRM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Solution 2 -->
+        <div class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div class="p-6">
+            <div class="flex items-center">
+              <div class="flex-shrink-0 bg-purple-500 rounded-md p-3">
+                <i class="fas fa-shopping-cart text-white text-xl"></i>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-medium text-gray-900">E-commerce Automation</h3>
+              </div>
+            </div>
+            <p class="mt-4 text-gray-500">
+              Sync orders across platforms, update inventory, send shipping notifications, and trigger post-purchase
+              sequences automatically.
+            </p>
+            <div class="mt-6 flex items-center">
+              <div class="flex-shrink-0">
+                <img class="h-8 w-8 rounded-full"
+                  src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&h=256&q=60"
+                  alt="">
+              </div>
+              <div class="ml-3">
+                <p class="text-sm font-medium text-gray-900">Michael Chen</p>
+                <div class="flex space-x-1 text-sm text-gray-500">
+                  <span>E-commerce Manager</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-6 py-4">
+            <div class="flex justify-between items-center">
+              <span class="text-sm font-medium text-indigo-600 group-hover:text-indigo-500">View case study →</span>
+              <div class="flex -space-x-2">
+                <div class="tooltip">
+                  <img class="h-8 w-8 rounded-full border-2 border-white"
+                    src="https://www.make.com/en/images/logos/make-logo.svg" alt="Make.com">
+                  <span class="tooltip-text">Make.com Workflow</span>
+                </div>
+                <div class="tooltip">
+                  <img class="h-8 w-8 rounded-full border-2 border-white"
+                    src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Shopify_logo.svg" alt="Shopify">
+                  <span class="tooltip-text">Shopify</span>
+                </div>
+                <div class="tooltip">
+                  <img class="h-8 w-8 rounded-full border-2 border-white"
+                    src="https://upload.wikimedia.org/wikipedia/commons/8/8d/QuickBooks_logo.svg" alt="QuickBooks">
+                  <span class="tooltip-text">QuickBooks</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Solution 3 -->
+        <div class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div class="p-6">
+            <div class="flex items-center">
+              <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                <i class="fas fa-users text-white text-xl"></i>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-medium text-gray-900">HR & Onboarding</h3>
+              </div>
+            </div>
+            <p class="mt-4 text-gray-500">
+              Automate employee onboarding, document collection, training scheduling, and equipment provisioning for new
+              hires.
+            </p>
+            <div class="mt-6 flex items-center">
+              <div class="flex-shrink-0">
+                <img class="h-8 w-8 rounded-full"
+                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&h=256&q=60"
+                  alt="">
+              </div>
+              <div class="ml-3">
+                <p class="text-sm font-medium text-gray-900">David Rodriguez</p>
+                <div class="flex space-x-1 text-sm text-gray-500">
+                  <span>HR Director</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-6 py-4">
+            <div class="flex justify-between items-center">
+              <span class="text-sm font-medium text-indigo-600 group-hover:text-indigo-500">View case study →</span>
+              <div class="flex -space-x-2">
+                <div class="tooltip">
+                  <img class="h-8 w-8 rounded-full border-2 border-white"
+                    src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Zapier_logo.svg" alt="Zapier">
+                  <span class="tooltip-text">Zapier Integration</span>
+                </div>
+                <div class="tooltip">
+                  <img class="h-8 w-8 rounded-full border-2 border-white"
+                    src="https://upload.wikimedia.org/wikipedia/commons/7/7a/BambooHR_logo.png" alt="BambooHR">
+                  <span class="tooltip-text">BambooHR</span>
+                </div>
+                <div class="tooltip">
+                  <img class="h-8 w-8 rounded-full border-2 border-white"
+                    src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Slack_Technologies_Logo.svg" alt="Slack">
+                  <span class="tooltip-text">Slack</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="#"
+          class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white gradient-bg hover:bg-indigo-700">
+          See More Case Studies
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Process Section -->
+  <div id="process" class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:text-center">
+        <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Our Process</h2>
+        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          How We Build Your Automation Solution
+        </p>
+        <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          A proven methodology to ensure your automation delivers maximum value
+        </p>
+      </div>
+
+      <div class="mt-10">
+        <div class="relative">
+          <div class="absolute left-1/2 -ml-px h-full w-0.5 bg-indigo-200" aria-hidden="true"></div>
+
+          <div class="relative mb-12">
+            <div class="flex items-center">
+              <div class="flex-shrink-0 gradient-bg rounded-full h-12 w-12 flex items-center justify-center text-white">
+                <span class="text-xl font-bold">1</span>
+              </div>
+              <div class="ml-4 sm:ml-6">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">Discovery & Planning</h3>
+                <p class="mt-2 text-base text-gray-500">
+                  We start by understanding your business processes, pain points, and goals. Then we map out the ideal
+                  workflow and select the right tools.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative mb-12">
+            <div class="flex items-center">
+              <div class="flex-shrink-0 gradient-bg rounded-full h-12 w-12 flex items-center justify-center text-white">
+                <span class="text-xl font-bold">2</span>
+              </div>
+              <div class="ml-4 sm:ml-6">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">Prototype & Testing</h3>
+                <p class="mt-2 text-base text-gray-500">
+                  We build a working prototype of your automation and test it thoroughly with sample data to ensure it
+                  works as expected.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative mb-12">
+            <div class="flex items-center">
+              <div class="flex-shrink-0 gradient-bg rounded-full h-12 w-12 flex items-center justify-center text-white">
+                <span class="text-xl font-bold">3</span>
+              </div>
+              <div class="ml-4 sm:ml-6">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">Implementation</h3>
+                <p class="mt-2 text-base text-gray-500">
+                  After your approval, we implement the automation with your live data and systems, monitoring closely
+                  for any issues.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="flex items-center">
+              <div class="flex-shrink-0 gradient-bg rounded-full h-12 w-12 flex items-center justify-center text-white">
+                <span class="text-xl font-bold">4</span>
+              </div>
+              <div class="ml-4 sm:ml-6">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">Optimization & Support</h3>
+                <p class="mt-2 text-base text-gray-500">
+                  We provide ongoing support and continuously optimize your automations as your business evolves and new
+                  features become available.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div id="testimonials" class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:text-center">
+        <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Testimonials</h2>
+        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          What Our Clients Say
+        </p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Testimonial 1 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="p-6">
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <img class="h-12 w-12 rounded-full"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&h=256&q=60"
+                  alt="">
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg font-medium text-gray-900">Sarah Johnson</h4>
+                <p class="text-gray-500">Marketing Director, TechStart</p>
+              </div>
+            </div>
+            <div class="mt-4">
+              <p class="text-gray-600 italic">
+                "FlowForge automated our lead management process, saving us 15 hours per week. What used to take days
+                now happens automatically in minutes. Their Zapier expertise is unmatched."
+              </p>
+            </div>
+            <div class="mt-4 flex items-center">
+              <div class="flex -space-x-1">
+                <img class="h-6 w-6 rounded-full border-2 border-white"
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Zapier_logo.svg" alt="Zapier">
+                <img class="h-6 w-6 rounded-full border-2 border-white"
+                  src="https://www.gstatic.com/images/branding/product/1x/sheets_48dp.png" alt="Google Sheets">
+                <img class="h-6 w-6 rounded-full border-2 border-white"
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/7b/HubSpot_Logo.png" alt="HubSpot">
+              </div>
+              <div class="ml-2 text-sm text-gray-500">
+                Saved 15 hrs/week
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="p-6">
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <img class="h-12 w-12 rounded-full"
+                  src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&h=256&q=60"
+                  alt="">
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg font-medium text-gray-900">Michael Chen</h4>
+                <p class="text-gray-500">E-commerce Manager, StyleHub</p>
+              </div>
+            </div>
+            <div class="mt-4">
+              <p class="text-gray-600 italic">
+                "The Make.com workflows they built eliminated all our manual order processing. Now our Shopify orders
+                flow automatically to QuickBooks and our fulfillment system with zero errors."
+              </p>
+            </div>
+            <div class="mt-4 flex items-center">
+              <div class="flex -space-x-1">
+                <img class="h-6 w-6 rounded-full border-2 border-white"
+                  src="https://www.make.com/en/images/logos/make-logo.svg" alt="Make.com">
+                <img class="h-6 w-6 rounded-full border-2 border-white"
+                  src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Shopify_logo.svg" alt="Shopify">
+                <img class="h-6 w-6 rounded-full border-2 border-white"
+                  src="https://upload.wikimedia.org/wikipedia/commons/8/8d/QuickBooks_logo.svg" alt="QuickBooks">
+              </div>
+              <div class="ml-2 text-sm text-gray-500">
+                100% error reduction
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="p-6">
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <img class="h-12 w-12 rounded-full"
+                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&h=256&q=60"
+                  alt="">
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg font-medium text-gray-900">David Rodriguez</h4>
+                <p class="text-gray-500">HR Director, GrowthCorp</p>
+              </div>
+            </div>
+            <div class="mt-4">
+              <p class="text-gray-600 italic">
+                "Our employee onboarding used to be a nightmare of paperwork and manual tasks. Now it's completely
+                automated from offer letter to first day. The team at FlowForge made it seamless."
+              </p>
+            </div>
+            <div class="mt-4 flex items-center">
+              <div class="flex -space-x-1">
+                <img class="h-6 w-6 rounded-full border-2 border-white"
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Zapier_logo.svg" alt="Zapier">
+                <img class="h-6 w-6 rounded-full border-2 border-white"
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/7a/BambooHR_logo.png" alt="BambooHR">
+                <img class="h-6 w-6 rounded-full border-2 border-white"
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Slack_Technologies_Logo.svg" alt="Slack">
+              </div>
+              <div class="ml-2 text-sm text-gray-500">
+                90% faster onboarding
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="gradient-bg">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+      <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+        <span class="block">Ready to automate your business?</span>
+        <span class="block text-indigo-200">Get started with a free consultation today.</span>
+      </h2>
+      <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+        <div class="inline-flex rounded-md shadow">
+          <a href="#contact"
+            class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50">
+            Book Free Call
+          </a>
+        </div>
+        <div class="ml-3 inline-flex rounded-md shadow">
+          <a href="#"
+            class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 bg-opacity-60 hover:bg-opacity-70">
+            See Pricing
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact" class="bg-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:text-center">
+        <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Contact Us</h2>
+        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          Let's Build Your Automation
+        </p>
+        <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          Fill out the form below and we'll get back to you within 24 hours to discuss your automation needs.
+        </p>
+      </div>
+
+      <div class="mt-10 sm:mt-12">
+        <div class="bg-white shadow-xl rounded-lg overflow-hidden">
+          <div class="md:grid md:grid-cols-2">
+            <div class="p-6 sm:p-10">
+              <h3 class="text-lg font-medium text-gray-900">Get in touch</h3>
+              <form class="mt-6 space-y-6">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                  <div class="mt-1">
+                    <input type="text" name="name" id="name" autocomplete="name"
+                      class="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                  </div>
+                </div>
+
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                  <div class="mt-1">
+                    <input id="email" name="email" type="email" autocomplete="email"
+                      class="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                  </div>
+                </div>
+
+                <div>
+                  <label for="company" class="block text-sm font-medium text-gray-700">Company</label>
+                  <div class="mt-1">
+                    <input type="text" name="company" id="company" autocomplete="organization"
+                      class="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+                  </div>
+                </div>
+
+                <div>
+                  <label for="message" class="block text-sm font-medium text-gray-700">How can we help?</label>
+                  <div class="mt-1">
+                    <textarea id="message" name="message" rows="4"
+                      class="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"></textarea>
+                  </div>
+                </div>
+
+                <div>
+                  <button type="submit"
+                    class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white gradient-bg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Submit Request
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="bg-gray-50 p-6 sm:p-10">
+              <h3 class="text-lg font-medium text-gray-900">Contact information</h3>
+              <div class="mt-6">
+                <p class="text-base text-gray-500">
+                  <i class="fas fa-map-marker-alt text-indigo-500 mr-2"></i> 123 Automation Way, San Francisco, CA 94107
+                </p>
+                <p class="mt-2 text-base text-gray-500">
+                  <i class="fas fa-phone-alt text-indigo-500 mr-2"></i> +1 (555) 123-4567
+                </p>
+                <p class="mt-2 text-base text-gray-500">
+                  <i class="fas fa-envelope text-indigo-500 mr-2"></i> hello@flowforge.com
+                </p>
+              </div>
+              <div class="mt-8">
+                <h4 class="text-sm font-medium text-gray-700">Follow us</h4>
+                <div class="mt-3 flex space-x-4">
+                  <a href="#" class="text-gray-400 hover:text-indigo-500">
+                    <i class="fab fa-twitter text-xl"></i>
+                  </a>
+                  <a href="#" class="text-gray-400 hover:text-indigo-500">
+                    <i class="fab fa-linkedin text-xl"></i>
+                  </a>
+                  <a href="#" class="text-gray-400 hover:text-indigo-500">
+                    <i class="fab fa-facebook text-xl"></i>
+                  </a>
+                  <a href="#" class="text-gray-400 hover:text-indigo-500">
+                    <i class="fab fa-instagram text-xl"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="mt-8 border-t border-gray-200 pt-8">
+                <h4 class="text-sm font-medium text-gray-700">Our partners</h4>
+                <div class="mt-3 grid grid-cols-2 gap-4">
+                  <div class="flex items-center justify-center">
+                    <img class="h-8" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Zapier_logo.svg"
+                      alt="Zapier">
+                  </div>
+                  <div class="flex items-center justify-center">
+                    <img class="h-8" src="https://www.make.com/en/images/logos/make-logo.svg" alt="Make.com">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Solutions</h3>
+          <div class="mt-4 space-y-4">
+            <a href="#" class="text-base text-gray-400 hover:text-white">Marketing Automation</a>
+            <a href="#" class="text-base text-gray-400 hover:text-white block">Sales Automation</a>
+            <a href="#" class="text-base text-gray-400 hover:text-white block">HR Automation</a>
+            <a href="#" class="text-base text-gray-400 hover:text-white block">E-commerce Automation</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Services</h3>
+          <div class="mt-4 space-y-4">
+            <a href="#" class="text-base text-gray-400 hover:text-white">Zapier Development</a>
+            <a href="#" class="text-base text-gray-400 hover:text-white block">Make.com Workflows</a>
+            <a href="#" class="text-base text-gray-400 hover:text-white block">AI Integration</a>
+            <a href="#" class="text-base text-gray-400 hover:text-white block">Custom Solutions</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Company</h3>
+          <div class="mt-4 space-y-4">
+            <a href="#" class="text-base text-gray-400 hover:text-white">About</a>
+            <a href="#" class="text-base text-gray-400 hover:text-white block">Blog</a>
+            <a href="#" class="text-base text-gray-400 hover:text-white block">Careers</a>
+            <a href="#" class="text-base text-gray-400 hover:text-white block">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Legal</h3>
+          <div class="mt-4 space-y-4">
+            <a href="#" class="text-base text-gray-400 hover:text-white">Privacy</a>
+            <a href="#" class="text-base text-gray-400 hover:text-white block">Terms</a>
+            <a href="#" class="text-base text-gray-400 hover:text-white block">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+        <div class="flex space-x-6 md:order-2">
+          <a href="#" class="text-gray-400 hover:text-white">
+            <i class="fab fa-twitter text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white">
+            <i class="fab fa-linkedin text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white">
+            <i class="fab fa-facebook text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white">
+            <i class="fab fa-instagram text-xl"></i>
+          </a>
+        </div>
+        <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+          &copy; 2023 FlowForge. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple form submission handler
+    document.querySelector('form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Thank you for your submission! We will contact you shortly.');
+      this.reset();
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
