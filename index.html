@@ -790,13 +790,21 @@
   </footer>
 
   <script>
-    // Smooth scrolling for anchor links
+    // Smooth scrolling for anchor links with nav offset
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+        const targetId = this.getAttribute('href');
+        if (targetId.length > 1 && document.querySelector(targetId)) {
+          e.preventDefault();
+          const nav = document.querySelector('nav');
+          const navHeight = nav ? nav.offsetHeight : 64; // fallback to 64px if not found
+          const target = document.querySelector(targetId);
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
       });
     });
   </script>
